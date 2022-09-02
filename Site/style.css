@@ -1,0 +1,129 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: BookCondensed; 
+}
+
+
+
+@font-face {
+    font-family:BookCondensed ;
+    src: url(../Fonte/Garamond-Font/Garamond\ BookCondensed.ttf);
+} 
+
+/* Conficguracao do HEADER */
+
+#global-header{
+    width: 100vw;
+    display: flex;
+    position: fixed ;
+    z-index: 1;
+    justify-content: center;
+    background-color: #FFFFFF;
+    box-shadow: 0px 5px 25px 4px #000000;
+    
+}
+
+.global-header{
+    width: 1180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.logo-topo {
+    max-width:270px;
+}
+
+.global-menu-opcoes{
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.global-btn-menu{
+    height: 100%;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 0px 6.7px;
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+.global-menu-opcoes a{
+    text-transform: uppercase;
+    color: #000000;
+    letter-spacing: 1px;
+}
+
+.global-menu-opcoes a:hover{
+    box-shadow: 0px 0px 25px 4px #ffffff;
+    color: rgb(180, 180, 180);
+}
+
+/* Conficguracao do BANNER */
+
+.banner-principal{
+    width: 100vw;
+}
+
+.banner-principal img{
+    width: 100%;
+    max-height: 800px;
+}
+
+#global-banner{
+    display: flex;
+    justify-content: center;
+}
+.img-banner{
+    width: 100vw;
+    max-width: 1500px;
+    height: 800px;
+}
+
+/* Configuracao Galeria de Wallpappers */
+
+.galeria{
+    max-width: 1180px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    overflow-x: scroll;
+    padding: 20px 0px 20px 0px;
+}
+
+.img-galeria{
+    display: absolute;
+    
+}
+.img-galeria{
+    position: relative;
+    width: 200px;
+    height: 130px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.img-galeria img{
+    width: 200px;
+    height: 130px;
+    border-radius: 5px;
+}
+
+.tag{
+    position: absolute;
+    width: 100%;
+    bottom: -0px;
+    border-radius: 0px 0px 5px 5px;
+    background-color: #0000001f;
+    box-shadow: 0px 5px 15px 5px #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    
+}
