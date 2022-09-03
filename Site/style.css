@@ -4,126 +4,290 @@
     font-family: BookCondensed; 
 }
 
-body{margin: 0 auto;}
 
 @font-face {
     font-family:BookCondensed ;
     src: url(../Fonte/Garamond-Font/Garamond\ BookCondensed.ttf);
 } 
 
-/* Conficguracao do HEADER */
+/*Tamanho padrao das sessoes*/
+
+.global-width-sessoes{
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 10px 20px;
+}
+
+/* Configuracao do HEADER */
 
 #global-header{
     width: 100vw;
-    display: flex;
-    position: fixed ;
+    position: fixed !important;
     z-index: 1;
-    justify-content: center;
     background-color: #FFFFFF;
-    box-shadow: 0px 5px 25px 4px #000000;
-    
+    box-shadow: 0px 10px 20px 1px rgb(0, 0, 0);
 }
 
 .global-header{
-    width: 1180px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0px 0.5px;
+    width: 100vw;
+    max-height: 65px;
+    box-sizing: border-box;
+}
+
+.global-logo img {
+    max-width: 25vw;
+    height: 65px;
     box-sizing: border-box;
 }
 
 .logo-topo {
-    max-width:270px;
+    width: 100%;
 }
 
 .global-menu-opcoes{
-    height: 100%;
+    height: 65px;
     display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
 }
 
-.global-btn-menu{
-    height: 100%;
+.global-btn-menu {
     display: flex;
-    box-sizing: border-box;
     align-items: center;
-    padding: 0px 6.7px;
-    margin-left: 5px;
+    justify-content: space-around;
+    height: 100%;
+    padding: 0px 5px;
     text-decoration: none;
-}
-
-.global-menu-opcoes a{
     text-transform: uppercase;
-    color: #000000;
     letter-spacing: 1px;
+    
 }
 
-.global-menu-opcoes a:hover{
-    box-shadow: 0px 0px 25px 4px #ffffff;
-    color: rgb(180, 180, 180);
+
+/*Animacoes dos botoes  - HEADER*/
+
+.global-btn-menu:hover{
+    background-color: #f0f0f0dc;
+    color: #000000;
 }
+
 
 /* Conficguracao do BANNER */
 
-.banner-principal{
+#global-banne{
     width: 100vw;
-}
-
-.banner-principal img{
-    width: 100%;
-    max-height: 800px;
-}
-
-#global-banner{
-    display: flex;
-    justify-content: center;
-}
-.img-banner{
-    width: 100vw;
-    max-width: 1500px;
-    height: 800px;
-}
-
-/* Configuracao Galeria de Wallpappers */
-
-.galeria{
-    width: 1180px;
-    display: flex; 
-    align-items: center;
-    margin: 0 auto;
-    flex-direction: row;
-    overflow-x: scroll;
-    padding: 20px 0px 20px 0px;
-}
-
-.img-galeria{
-    display: absolute;
+    
     
 }
-.img-galeria{
+
+.img-banner{
+    width: 100vw;
+    height: 75vh;
+   
+}
+
+.img-banner img{
+    width: 100%;
+    height: 600px
+}
+
+/*Configuracao da galeria*/
+
+.galeria{
+    /* width: 100%; */
+    display: flex;
+    overflow-x: scroll;
+}
+
+.img-galeria  {
     position: relative;
-    width: 200px;
-    height: 130px;
-    margin: 10px;
-    border-radius: 5px;
+    width: 350px;
+    height:110px;
+    display: flex;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 0px 5px;
 }
 
 .img-galeria img{
-    width: 200px;
-    height: 130px;
-    border-radius: 5px;
-}
+    /* width: 100%;
+    height: 100%; */
+    border-radius: 10px;
+} 
 
 .tag{
     position: absolute;
     width: 100%;
-    bottom: -0px;
-    border-radius: 0px 0px 5px 5px;
-    background-color: #0000001f;
-    box-shadow: 0px 5px 15px 5px #ffffff;
+    bottom: 0;
     text-align: center;
     text-transform: uppercase;
-    color: #ffffff;
+    color: #FFFFFF;
+    background-color: #00000052;
+    box-shadow: 0px 5px 15px 2px #FFFFFF;
+    border-radius: 0px 0px 10px 10px;
     
+} 
+
+/*Configuracao dos botoes de selecao dos personagens*/
+
+.btn-personagens{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-personagens-descricao{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    box-sizing: border-box;
+    margin:0px 10px;
+}
+
+.btn-personagens-descricao img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    position: absolute;
+    top: auto;
+    opacity: 50%;
+}
+
+.btn-personagens-descricao img:hover {
+    opacity:100%;
+    transition: 1000ms;
+    box-shadow: 0px 0px 20px 3px #e6e6e6;
+
+}
+/*Configuracao da descricao dos personagens*/
+
+.personagens{
+    display: flex;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+.personagens-descricao{
+    position: relative;
+}
+
+.personagens-esquerda{
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    padding: 5px 5px 15px 10px;
+}
+
+.personagens-bio p{
+    padding: 15px 5px 15px 15px;
+}
+
+.padrao{
+    padding: 15px 0px;
+    
+}
+
+.circle{
+    background-color: #000000;
+    position: absolute;
+    left: -8px;
+    top:  117px;
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+}
+
+.circle2{
+    background-color: #000000;
+    position: absolute;
+    left: -8px;
+    top:  325px;
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+}
+
+.circle3{
+    background-color: #000000;
+    position: absolute;
+    left: -8px;
+    top:  585px;
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+}
+
+.padrao h3{
+    line-height: 45px;
+}
+.personagens-descricao{
+    padding: 15px 5px 15px 15px;
+    max-width: 300px;
+    border-left: 3px solid rgb(0, 0, 0);
+}
+
+.personagens-descricao p{
+    padding: 3px;
+}
+
+.personagens-direita{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    max-width: 40vw;
+    align-items: center;
+    /* border: 1px solid blue; */
+}
+
+.personagens-img{
+    position: relative;
+    border: 3px solid;
+}
+
+.square{
+    width: 100%;
+    height: 100%;
+    border: 3px solid ;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.personagens-direita img{
+    width: 100%;
+}
+
+
+/*configuracao das caracteriscas dos personagens*/
+
+
+.tb-descricao-esquerda{
+    text-align: center;
+    text-decoration: underline;
+    line-height: 40px;
+    
+}
+
+.tb-descricao-esquerda h3{
+    color: #838383;
+    
+}
+.table-caracteristicas{
+    max-width: 300px;
+}
+
+
+.table-caracteristicas h4{
+    font-size: 20px;
+    text-align: center;
+}
+
+.table-caracteristicas h5{
+    text-align: center;
+    color: #838383;
+    line-height: 20px;
 }
