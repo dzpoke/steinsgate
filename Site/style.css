@@ -4,6 +4,9 @@
     font-family: BookCondensed; 
 }
 
+section{
+    margin-bottom: 10px;
+}
 
 @font-face {
     font-family:BookCondensed ;
@@ -13,7 +16,7 @@
 /*Tamanho padrao das sessoes*/
 
 .global-width-sessoes{
-    max-width: 1200px;
+    max-width: 1180px;
     margin: 0px auto;
     padding: 10px 20px;
 }
@@ -21,7 +24,7 @@
 /* Configuracao do HEADER */
 
 #global-header{
-    width: 100vw;
+    width: 100%;
     position: fixed !important;
     z-index: 1;
     background-color: #FFFFFF;
@@ -39,7 +42,7 @@
 }
 
 .global-logo img {
-    max-width: 25vw;
+    max-width: 200px;
     height: 65px;
     box-sizing: border-box;
 }
@@ -76,21 +79,8 @@
 
 /* Conficguracao do BANNER */
 
-#global-banne{
-    width: 100vw;
-    
-    
-}
-
 .img-banner{
-    width: 100vw;
-    height: 75vh;
-   
-}
-
-.img-banner img{
     width: 100%;
-    height: 600px
 }
 
 /*Configuracao da galeria*/
@@ -136,6 +126,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-x: scroll;
 }
 
 .btn-personagens-descricao{
@@ -149,7 +140,7 @@
 .btn-personagens-descricao img {
     width: 100%;
     height: 100%;
-    border-radius: 100%;
+    border-radius: 50%;
     position: absolute;
     top: auto;
     opacity: 50%;
@@ -290,4 +281,126 @@
     text-align: center;
     color: #838383;
     line-height: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Configuracao da area de streamer*/
+
+.streamers{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.img-streamers{
+    width: 300px;
+    height: 220px;
+    margin: 5px 10px;
+    box-sizing: border-box;
+}
+
+.img-streamers img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    opacity: 50%;
+}
+
+.img-streamers img:hover{
+    opacity: 100%;
+}
+
+/*Aparatos futuristas*/
+
+.aparatos-futuristas{
+    border: 1px solid;
+}
+
+
+/*Area de cadastro*/
+
+.cadastro-email{
+    
+    padding: 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.caixa-input{
+    width: 100vw;
+    height: 130px;
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #000000b2;
+    color: white;
+}
+
+.caixa-input h1{
+    font-size: 2vw ;
+    margin-bottom: 15px;
+}
+
+.caixa-input label{
+    font-size: 2vw ;
+}
+
+.caixa-input input{
+    width: 655px;
+    height: 25px;
+    border-radius: 25px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.caixa-input  button{
+    width: 150px;
+    height: 25px;
+    border-radius: 25px;
+    font-size: 20px;
+    background-color: #FAC407;
+    color: #e6e6e6;
+    cursor: pointer;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+
+/*Rodape*/
+
+footer{
+    width: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 10px 20px 1px rgb(0, 0, 0);
+
+}
+.global-rodape{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
