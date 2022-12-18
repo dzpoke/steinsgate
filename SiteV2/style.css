@@ -5,14 +5,15 @@
     text-decoration: none;
 }
 
+span{
+  font-weight: bold;
+}
 
 /*Tamanhando maximo do site */
 
-#global-max-size{
+.global-max-size{
     max-width: 1280px;
     margin: 0 auto;
-
-    border: 2px solid red;
 }
 
 /*HEADER*/
@@ -198,66 +199,158 @@ nav a{
 }
 
 .btn-personagens{
-     width: 100%;
+    width: 100%;
     height: 100%;
 }
 
 /*Caracteristicas dos personagens*/
 
-.global-description-persona{
-    padding: 0px 20px;
-    display: grid;
-    grid-template-columns: 65% 35% ;
-    border: 1px solid red;
-}
+/* .global-description-persona{
+    padding-top: 40px;
+} */
 
 .global-description-left{
     display: grid;
-    gap: 15px;
-    grid-template-columns: 50%;
+    gap: 5px;
+    grid-template-columns: 65% auto ;
+    grid-template-rows: 25% 25% 25% 27%;
 }
 
 .description1{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    padding-top: 20px;
+  width: 70%;
+  padding: 30px 0;
 }
 
-.description2{
-    grid-column-start: 1;
-    grid-column-end: 2;
+.description1,
+.description2,
+.description3,
+.description4,
+.description5,
+.description6{
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
-.description3{
-    grid-column-start: 1;
-    grid-column-end: 2;
-}
-
+.description2,
+.description3,
 .description4{
-    grid-column-start: 1;
-    grid-column-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  width: 60%;
+  text-align: start;
 }
 
-/*Descricao do personagem*/
-
-.global-description-right{
-    display: grid;
-    grid-template-columns: auto;
-    justify-content: center;
+.description2,
+.description3,
+.description4, h3{
+  padding-bottom: 20px;
 }
 
-.global-img-caracters{
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 5px;
-    justify-content: center;
-}
-
-.global-img-caracters .teste{
-    grid-column-start: 1;
-    grid-column-end: 3;
+.description2,
+.description3,
+.description4, p::after{
+  content: '';
+  border-bottom: 1px solid rgba(113, 113, 113, 0.343);
 }
 
 #global-img-profile img{
-    width: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.description5{
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  position: relative;
+}
+
+.description7{
+  display: flex;
+  justify-content: space-around;
+}
+
+.description{
+  padding: 10px 0;
+}
+
+.description6 > h3{
+  font-size: 2em;
+  text-align: center;
+}
+
+
+.description6 > h4{
+  text-align: center;
+  text-decoration: underline;
+}
+
+
+/*Estilizando as imagens do perfil do persoangem*/
+
+.description5{
+  border: 2px solid #000;
+}
+
+.teste3{
+  width: 100%;
+  height: 100%;
+  border: 2px solid ;
+  position: absolute;
+  top: -7px;
+  right: -5.5px;
+}
+
+/*Streamrs*/
+
+.streamrs{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px 0;
+  
+}
+
+.global-streamrs img{
+  width: 300px;
+  height: 150px;
+  border-radius: 10px;
+  border: 2px solid;
+}
+
+
+/*Rodape*/
+
+footer{
+  background-color: #FFFFFF;
+  box-shadow: 0px 10px 20px 1px rgb(0, 0, 0);
+}
+
+.global-rodape{
+  display: grid;
+  grid-template-columns: 33.33% 33.33%  33.33% ;
+
+}
+
+.global-extras{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.global-extras > small{
+  margin-top: 10px;
+}
+
+.tenor-gif-embed{
+  opacity: 20%;
+}
+
+.tenor-gif-embed:hover{
+  opacity: 100%;
+  cursor: pointer;
 }
