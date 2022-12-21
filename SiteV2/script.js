@@ -36,36 +36,41 @@ function showSlides(n) {
 
 
 
-// const slctPersona =document.querySelector('.btn-personagens-descricao')
-const slctPersonagens =[...document.querySelectorAll('.btn-personagens-descricao')]
+// const slctPersona = document.querySelector('.btn-personagens-descricao')
 
-function retornaProfile(slctPersonagens) {
-  return slctPersonagens.classList[1]
+const slctPersonagens = [...document.querySelectorAll('.btn-personagens-descricao')]
+
+/*Capturando o personagem selecionado*/
+
+function returnProfile() {
+
+    slctPersonagens.map((el)=>{
+
+        el.addEventListener('click',()=>{
+            
+            Profile = el.classList[1]
+
+            switch (Profile){
+
+                case 'Rintaro_Profile':
+                    let desRitaro = document.querySelector('.description1').innerHTML = 'Rintaro Okabe (岡部 倫太郎, Okabe Rintarō ? ), frequentemente apelidado de Okarin (オカリン) ou Hououin Kyouma (鳳凰院凶真, Hououin Kyōma ), é um autoproclamado cientista louco e o principal protagonista da série Steins;Gate.'
+                    let apprRitaro = document.querySelector('.description2 p').innerHTML= 'Okabe tem as características de um jovem esguio, com mandíbula quadrada e bochechas ossudas. Ele tem o cabelo preto curto penteado para trás e tem íris marrons, com uma pequena barba por fazer no queixo e nas bochechas. Rintaro também usa um jaleco que chega até as canelas, sobre uma camiseta branca lisa (cinza claro no anime) e calça cáqui.'
+                    
+                    console.log('Personagem selecionado ' + Profile)
+                    
+                    break
+            
+                case 'Kurisu_profile':
+                    let bioKurisu = document.querySelector('.description1').innerHTML = 'Kurisu Makise (牧瀬紅莉栖Makise Kurisu ? ) é filha de Shouichi Makise , uma garota genial que se formou na universidade aos dezessete anos, e membro do Brain Science Institute da Viktor Chondria University e do Future Gadget Lab .'
+                    let apprKurisu = document.querySelector('.description2 p').innerHTML= 'Kurisu é uma jovem esguia com cabelos castanhos na altura da cintura e olhos violeta opacos. Os cabelos, que ela prefere soltar, variam em tons de ruivo, do mogno ao ruivo. A cor de seu cabelo difere consideravelmente no anime (vermelho) do VN original (castanho), embora seja apenas na aparência artística.'
+            
+                    console.log('Personagem selecionado ' + Profile)
+                    break
+                default:
+                    console.log('Nao Encontrado')
+            }
+        })
+    })
 }
 
-const t1 = slctPersonagens.map(retornaProfile)
-console.log(t1)
-
-
-slctPersona.addEventListener('click',()=>{
-
-    let btnProfile = slctPersona.classList[1]
-    console.log(btnProfile)
-
-    switch (btnProfile){
-    case 'Rintaro_Profile':
-        let desRitaro = document.querySelector('.description1').innerHTML = ''
-        
-        console.log('Personagem selecionado' + desRitaro)
-        break
-
-    case 'Kurisu_profile':
-        let desKurisu = document.querySelector('.description2').innerHTML = 'Kurisu Makise (牧瀬紅莉栖Makise Kurisu ? ) é filha de Shouichi Makise , uma garota genial que se formou na universidade aos dezessete anos, e membro do Brain Science Institute da Viktor Chondria University e do Future Gadget Lab .'
-
-        console.log('Personagem selecionado' + desKurisu)
-        break
-    default:
-        console.log('Nao Encontrado')
-}
-
-})
+returnProfile()
