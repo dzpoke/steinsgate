@@ -66,6 +66,12 @@ function returnProfile() {
             
                     console.log('Personagem selecionado ' + Profile)
                     break
+                case 'Daru_profile':
+                    let bioDaru = document.querySelector('.description1').innerHTML = 'Itaru Hashida (橋田 至, Hashida Itaru ), também conhecido por seu apelido Daru , seu identificador online DaSH ("Daru the Super Hacker") e Barrel Titor , é um personagem principal em Steins;Gate e Steins;Gate 0 . Ele é um hacker experiente e um otaku hardcore, membro do Future Gadget Lab e amigo próximo de Rintaro Okabe , que eventualmente se torna marido de Yuki Amane e pai de Suzuha Amane.'
+                    let apprDaru = document.querySelector('.description2 p').innerHTML= 'Daru é um cara baixo e gordo que precisa de óculos para enxergar. Ele sempre usa uma camiseta verde escuro/oliva e um par de jeans azul junto com seu boné amarelo característico. Em um dos episódios da adaptação do anime, Daru é visto vestindo uma camisa havaiana amarela.'
+              
+                    console.log('Personagem selecionado ' + Profile)
+                    break
                 default:
                     console.log('Nao Encontrado')
             }
